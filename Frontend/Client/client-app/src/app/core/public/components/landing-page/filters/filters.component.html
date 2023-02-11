@@ -1,0 +1,63 @@
+<div
+  [class]="(isLargeScreen$ | async) ? 'd-flex gap-3' : 'd-flex gap-2 flex-wrap'"
+>
+  <input
+    type="text"
+    [(ngModel)]="restaurantName"
+    size="inputGroup-sizing-sm"
+    class="form-control"
+    placeholder="Restaurant name"
+    aria-label="Restaurant name"
+    aria-describedby="basic-addon1"
+  />
+
+  <select
+    [(ngModel)]="restaurantPrice"
+    placeholder="Order by price value"
+    class="form-select"
+    aria-label="Filter by price"
+    size="inputGroup-sizing-sm"
+  >
+    <option value="null">Filter by price</option>
+    <option value="HTL">High to Low</option>
+    <option value="LTH">Low to High</option>
+  </select>
+
+  <select
+    [(ngModel)]="restaurantPopularity"
+    placeholder="Filter by popularity"
+    class="form-select"
+    aria-label="Filter by price"
+    size="inputGroup-sizing-sm"
+  >
+    <option value="null">Filter by popularity</option>
+    <option value="PAT">Popular all time</option>
+    <option value="PO">Popular overall</option>
+    <option value="PTM">Popular this month</option>
+  </select>
+
+  <div
+    [class]="
+      (isLargeScreen$ | async)
+        ? 'd-flex'
+        : 'd-flex gap-2 align-items-center w-100 m-2 justify-content-end'
+    "
+  >
+    <div class="d-flex align-items-center gap-2" style="min-width: 150px">
+      <input
+        [(ngModel)]="onlyFavorite"
+        type="checkbox"
+        aria-label="Checkbox for following text input"
+      />
+      <div>Favorites only</div>
+    </div>
+
+    <button
+      (click)="onSearchByName()"
+      type="button"
+      class="btn btn-primary background-orange"
+    >
+      Search
+    </button>
+  </div>
+</div>

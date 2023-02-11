@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Delivery App.iml" filepath="$PROJECT_DIR$/.idea/Delivery App.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway-api/gateway-api/gateway-api.iml" filepath="$PROJECT_DIR$/gateway-api/gateway-api/gateway-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/naming-server/naming-server/naming-server.iml" filepath="$PROJECT_DIR$/naming-server/naming-server/naming-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-manager/order-manager/order-manager.iml" filepath="$PROJECT_DIR$/order-manager/order-manager/order-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restaurant-manager/restaurant-manager/restaurant-manager.iml" filepath="$PROJECT_DIR$/restaurant-manager/restaurant-manager/restaurant-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reviews-manager/reviews-manager/reviews-manager.iml" filepath="$PROJECT_DIR$/reviews-manager/reviews-manager/reviews-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/security-auth/security-auth/security-auth.iml" filepath="$PROJECT_DIR$/security-auth/security-auth/security-auth.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,45 @@
+<div class="resto-container">
+  <div
+    (click)="OpenRestaurantDetails(resto.id)"
+    [class]="
+      (isLargeScreen$ | async)
+        ? 'resto-card resto-card-web'
+        : 'resto-card resto-card-mobile'
+    "
+    *ngFor="let resto of restaurant"
+  >
+    <div class="img-container mb-2">
+      <img
+        [src]="resto.picture"
+        [class]="
+          (isLargeScreen$ | async) ? 'img-resto-web' : 'img-resto-mobile'
+        "
+      />
+      <div class="love-heart">
+        <mat-icon *ngIf="false">favorite_border</mat-icon>
+        <mat-icon>favorite</mat-icon>
+      </div>
+    </div>
+    <div class="p-2">
+      <div class="title-rating d-flex justify-content-between">
+        <div class="title">
+          <b>{{ resto.name }}</b>
+        </div>
+        <div class="rating d-flex">
+          <mat-icon style="color: gold">star</mat-icon>
+          <div>5</div>
+        </div>
+      </div>
+    </div>
+    <div class="other-info-container p-2 d-flex justify-content-center gap-4">
+      <div class="d-flex align-items-center distance">
+        <mat-icon class="orange-item">hourglass_full</mat-icon>
+        <div>8 KM</div>
+      </div>
+      <div class="d-flex align-items-center delivery-fees">
+        <mat-icon class="orange-item">shopping_basket</mat-icon>
+        <div>Free Delivery</div>
+      </div>
+    </div>
+  </div>
+</div>

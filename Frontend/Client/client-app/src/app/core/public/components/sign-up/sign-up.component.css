@@ -1,0 +1,91 @@
+.navbar-container {
+  background-color: var(--orange-color);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 40px;
+}
+
+.logo-container {
+  display: flex;
+}
+
+.small-screen-font {
+  font-size: 25px !important;
+}
+
+.large-screen-font {
+  font-size: 20px;
+}
+
+.page-content {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.delivery-login-pic-web {
+  height: 300px;
+}
+
+.delivery-login-pic-web-small {
+  height: 250px;
+}
+
+.title-welcome {
+  color: grey;
+  font-size: 30px;
+}
+
+.title-sign {
+  color: grey;
+}
+
+.actions-section-web {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions-section-medium-small {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-button {
+  width: 250px;
+}
+
+.forget-container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.hover-text {
+  color: var(--orange-color);
+  font-weight: 500;
+  text-align: right;
+}
+.hover-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.grey-font {
+  color: grey;
+}
+
+.orange-font {
+  color: var(--orange-color);
+}

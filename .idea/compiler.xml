@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gateway-api" />
+        <module name="reviews-manager" />
+        <module name="security-auth" />
+        <module name="order-manager" />
+        <module name="restaurant-manager" />
+        <module name="naming-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="clients-manager" target="17" />
+      <module name="gateway-api" target="17" />
+      <module name="Identity-service" target="17" />
+      <module name="naming-server" target="17" />
+      <module name="order-manager" target="17" />
+      <module name="orders-manager" target="17" />
+      <module name="restaurant-manager" target="17" />
+      <module name="restaurants-manager" target="17" />
+      <module name="reviews-manager" target="17" />
+      <module name="security-auth" target="17" />
+      <module name="user-manager" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Identity-service" options="-parameters" />
+      <module name="clients-manager" options="-parameters" />
+      <module name="gateway-api" options="-parameters" />
+      <module name="naming-server" options="-parameters" />
+      <module name="order-manager" options="-parameters" />
+      <module name="orders-manager" options="-parameters" />
+      <module name="restaurant-manager" options="-parameters" />
+      <module name="restaurants-manager" options="-parameters" />
+      <module name="reviews-manager" options="-parameters" />
+      <module name="security-auth" options="-parameters" />
+      <module name="user-manager" options="-parameters" />
+    </option>
+  </component>
+</project>

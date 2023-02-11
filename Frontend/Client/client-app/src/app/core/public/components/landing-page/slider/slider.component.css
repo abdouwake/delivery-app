@@ -1,0 +1,48 @@
+.drag-scroll-web {
+  height: 50px;
+  width: 1100px;
+  text-align: center;
+}
+
+.drag-scroll-mobile {
+  width: 350px;
+  height: 50px;
+
+  margin-left: 20px;
+}
+
+.type-element {
+  margin-right: 20px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border: solid 1px rgb(192, 192, 192);
+  border-radius: 10px;
+}
+
+.type-element-selected {
+  margin-right: 20px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border: solid 1px var(--orange-color);
+  border-radius: 10px;
+}
+
+.type-content {
+  margin-top: -8px;
+  font-size: 15px;
+}
+
+.color-text:hover {
+  cursor: pointer;
+  color: var(--orange-color);
+}
+
+.color-text {
+  color: rgb(180, 180, 180);
+}
+
+.color-text-selected {
+  color: var(--orange-color);
+}

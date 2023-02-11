@@ -1,0 +1,63 @@
+<nav class="navbar bg-light justify-content-between">
+  <div
+    [class]="
+      !(isLargeScreen$ | async) ? 'd-flex justify-content-between w-100' : ''
+    "
+  >
+    <div
+      [class]="
+        !(isLargeScreen$ | async)
+          ? 'logo-container-small'
+          : 'logo-container-large'
+      "
+    >
+      <div>
+        <mat-icon class="center-vertical orange-text d-flex"> vpn_key</mat-icon>
+      </div>
+      <div class="app-title"><b class="orange-text">Delivery</b> App</div>
+    </div>
+
+    <div *ngIf="!(isLargeScreen$ | async)">
+      <mat-icon class="burger-menu">menu</mat-icon>
+    </div>
+  </div>
+
+  <div
+    [class]="
+      (isLargeScreen$ | async) ? 'header-items-large' : 'header-items-small'
+    "
+  >
+    <div
+      *ngFor="let item of headerItems"
+      [class]="
+        selectedItem == item.key ? 'header-item selected-item' : 'header-item'
+      "
+    >
+      <div class="d-flex align-items-center justify-content-center">
+        <mat-icon class="center-vertical">
+          {{ item.icon }}
+        </mat-icon>
+        <div>{{ item.title }}</div>
+      </div>
+    </div>
+  </div>
+
+  <ng-container *ngIf="isLargeScreen$ | async">
+    <form class="form-inline d-flex">
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button
+        class="orange-button btn btn-outline-success my-2 my-sm-0 m-2"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </ng-container>
+</nav>
+
+<br />

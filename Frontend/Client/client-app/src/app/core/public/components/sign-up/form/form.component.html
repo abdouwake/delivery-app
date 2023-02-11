@@ -1,0 +1,156 @@
+<div class="d-flex flex-column justify-content-center">
+  <img
+    [ngClass]="
+      (isSmallScreen$ || isMediumScreen$ | async)
+        ? 'delivery-login-pic-web-small'
+        : 'delivery-login-pic-web'
+    "
+    [src]="role | selectSignInPicture"
+  />
+  <div class="title-welcome">Welcome back</div>
+  <div class="title-sign">Sign to continue</div>
+  <br />
+</div>
+
+<div
+  [ngClass]="
+    (isSmallScreen$ || isMediumScreen$ | async)
+      ? 'actions-section-medium-small'
+      : 'actions-section-web'
+  "
+>
+  <ng-container *ngIf="step == 0">
+    <div class="input-area">
+      <div class="badge-input">
+        <mat-icon class="icon-input">account_circle</mat-icon> Type of use
+      </div>
+      <select [(ngModel)]="role" class="form-select">
+        <option selected value="USER">Client</option>
+        <option value="LIVREUR">Delivery Agent</option>
+        <option value="RESTAURANT">Restaurant owner</option>
+      </select>
+    </div>
+
+    <div class="input-area">
+      <div class="badge-input">
+        <mat-icon class="icon-input">phone</mat-icon>
+        Phone number
+      </div>
+      <input
+        [(ngModel)]="phoneNumb"
+        type="text"
+        class="form-control"
+        placeholder="Phone number"
+        aria-label="Phone number"
+        aria-describedby="Phone number"
+      />
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="step == 1">
+    <div class="input-area">
+      <div class="badge-input">
+        <mat-icon class="icon-input">perm_identity</mat-icon> First name
+      </div>
+      <input
+        [(ngModel)]="prenom"
+        type="text"
+        class="form-control"
+        placeholder="First name"
+        aria-label="First name"
+        aria-describedby="First name"
+      />
+    </div>
+
+    <div class="input-area">
+      <div class="badge-input">
+        <mat-icon class="icon-input">perm_identity</mat-icon> Last name
+      </div>
+      <input
+        [(ngModel)]="nom"
+        type="text"
+        class="form-control"
+        placeholder="Last name"
+        aria-label="Last name"
+        aria-describedby="Last name"
+      />
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="step == 2">
+    <div class="input-area">
+      <div class="badge-input">
+        <mat-icon class="icon-input">lock</mat-icon> E-mail address
+      </div>
+      <input
+        [(ngModel)]="email"
+        type="email"
+        class="form-control"
+        placeholder="E-mail address"
+        aria-label="E-mail address"
+        aria-describedby="E-mail address"
+      />
+    </div>
+
+    <div class="input-area">
+      <div class="badge-input">
+        <mat-icon class="icon-input">lock</mat-icon> Password
+      </div>
+      <input
+        [(ngModel)]="password"
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        aria-label="Password"
+        aria-describedby="Password"
+      />
+    </div>
+
+    <div class="input-area">
+      <div class="badge-input">
+        <mat-icon class="icon-input">assignment</mat-icon> Password confirmation
+      </div>
+      <input
+        [(ngModel)]="passwordConf"
+        type="password"
+        class="form-control"
+        placeholder="Password confirmation"
+        aria-label="Password confirmation"
+        aria-describedby="Password confirmation"
+      />
+    </div>
+  </ng-container>
+
+  <div class="completion-bar">
+    <div *ngFor="let bar of [].constructor(STEP_MAX - 1); let index = index">
+      <div
+        [ngClass]="index <= step ? 'step-bar bar-filled  ' : 'step-bar'"
+      ></div>
+    </div>
+  </div>
+
+  <div class="d-flex gap-2">
+    <ng-container *ngIf="step - 1 != -1">
+      <button
+        type="button"
+        class="btn login-button previous-button background-orange btn-primary"
+        (click)="changeStepDown()"
+      >
+        Previous
+      </button></ng-container
+    >
+
+    <button
+      type="button"
+      class="btn login-button background-orange btn-primary"
+      (click)="step + 1 != STEP_MAX - 1 ? changeStepUp() : signin()"
+    >
+      {{ step + 1 != STEP_MAX - 1 ? "Next" : "Sign in" }}
+    </button>
+  </div>
+  <br />
+  <div class="sign-up-space" (click)="redirect()">
+    <span class="grey-font">Already have account ? </span>
+    <span class="hover-text">Sign in here! </span>
+  </div>
+</div>

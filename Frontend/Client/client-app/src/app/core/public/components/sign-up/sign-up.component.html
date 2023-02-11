@@ -1,0 +1,25 @@
+<div class="page-container">
+  <nav class="navbar-container">
+    <div class="logo-container">
+      <div>
+        <i class="bi bi-arrow-right-square-fill"></i>
+      </div>
+      <div
+        [ngClass]="
+          (isSmallScreen$ | async)
+            ? 'h-center small-screen-font'
+            : 'h-center large-screen-font'
+        "
+      >
+        <mat-icon color="white">local_dining</mat-icon>
+        Delivery App
+      </div>
+    </div>
+  </nav>
+
+  <div class="body-page-login">
+    <div class="page-content">
+      <app-form></app-form>
+    </div>
+  </div>
+</div>

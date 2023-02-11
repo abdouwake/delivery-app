@@ -1,0 +1,235 @@
+<div
+  [class]="
+    (isLargeScreen$ | async) ? 'page-container-web' : 'page-container-mobile'
+  "
+>
+  <app-header [selectedItem]="0"></app-header>
+  <div class="body-page">
+    <div
+      [class]="
+        (isLargeScreen$ | async) ? 'content-page-web' : 'content-page-mobile'
+      "
+    >
+      <ng-container *ngIf="isLargeScreen$ | async">
+        <div class="banner-picture-web">
+          <img
+            class="image-sizing"
+            src="https://media-cdn.tripadvisor.com/media/photo-s/12/47/f3/8c/oko-restaurant.jpg"
+          />
+          <div class="description-restaurant">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex gap-4">
+                <div>LA SAVANE</div>
+                <div class="rating d-flex">
+                  <mat-icon style="color: gold">star</mat-icon>
+                  <div>5</div>
+                </div>
+              </div>
+              <div class="d-flex gap-4">
+                <div class="d-flex align-items-center distance">
+                  <mat-icon class="orange-item">hourglass_full</mat-icon>
+                  <div>8 KM</div>
+                </div>
+                <div class="d-flex align-items-center delivery-fees">
+                  <mat-icon class="orange-item">shopping_basket</mat-icon>
+                  <div>Free Delivery</div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="description-text">
+              lorem ipsum delore lorem ipsum delore lorem ipsum delore lorem
+              ipsum delore lorem ipsum delore lorem ipsum delore lorem ipsum
+            </div>
+            <br />
+            <div class="d-flex gap-4 align-items-top justify-content-between">
+              <div class="review-side">
+                <div class="d-flex gap-2">
+                  <mat-icon style="color: gold">star</mat-icon>
+                  <div>Avis positif</div>
+                </div>
+                <div class="review-text">
+                  lorem ipsum delore avis ici lorem ipsum delorelorem ipsum
+                  delore avis...
+                </div>
+              </div>
+
+              <div class="review-side">
+                <div class="d-flex gap-2">
+                  <mat-icon style="color: gold">star</mat-icon>
+                  <div>Avis negatif</div>
+                </div>
+                <div class="review-text">
+                  lorem ipsum delore avis ici lorem ipsum delorelorem ipsum
+                  delore avis...
+                </div>
+              </div>
+            </div>
+            <br />
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="!(isLargeScreen$ | async)">
+        <img
+          class="banner-picture-mobile"
+          src="assets/RestaurantView/bannerMobile.png"
+        />
+      </ng-container>
+
+      <br />
+      <br />
+      <div class="title-element">
+        <mat-icon class="orange-element">book</mat-icon>
+        <div class="title-primary">Food</div>
+        <div class="title-secondary">Types</div>
+      </div>
+
+      <br />
+      <div class="slider-container">
+        <div class="restaurant-list"></div>
+      </div>
+      <app-food-slider></app-food-slider>
+
+      <br />
+      <div class="title-element">
+        <mat-icon class="orange-element">assignment</mat-icon>
+        <div class="title-primary">Restaurant</div>
+        <div class="title-secondary">Dishes</div>
+      </div>
+      <br />
+
+      <div class="d-flex gap-4 dishes-container">
+        <div class="d-flex gap-2 flex-column dish">
+          <div class="title">Cheesy Chicken (18$)</div>
+          <div>
+            <img
+              class="picture-dish"
+              src="https://assets.afcdn.com/recipe/20200219/107901_w1024h1024c1cx4330cy2886.jpg"
+            />
+          </div>
+          <div class="action-button">+ ADD</div>
+        </div>
+        <div class="d-flex gap-2 flex-column dish">
+          <div class="title">Cheesy Chicken (18$)</div>
+          <div>
+            <img
+              class="picture-dish"
+              src="https://assets.afcdn.com/recipe/20200219/107901_w1024h1024c1cx4330cy2886.jpg"
+            />
+          </div>
+          <div class="action-button">+ ADD</div>
+        </div>
+        <div class="d-flex gap-2 flex-column dish">
+          <div class="title">Cheesy Chicken (18$)</div>
+          <div>
+            <img
+              class="picture-dish"
+              src="https://assets.afcdn.com/recipe/20200219/107901_w1024h1024c1cx4330cy2886.jpg"
+            />
+          </div>
+          <div class="action-button">+ ADD</div>
+        </div>
+        <div class="d-flex gap-2 flex-column dish">
+          <div class="title">Cheesy Chicken (18$)</div>
+          <div>
+            <img
+              class="picture-dish"
+              src="https://assets.afcdn.com/recipe/20200219/107901_w1024h1024c1cx4330cy2886.jpg"
+            />
+          </div>
+          <div class="action-button">+ ADD</div>
+        </div>
+        <div class="d-flex gap-2 flex-column dish">
+          <div class="title">Cheesy Chicken (18$)</div>
+          <div>
+            <img
+              class="picture-dish"
+              src="https://assets.afcdn.com/recipe/20200219/107901_w1024h1024c1cx4330cy2886.jpg"
+            />
+          </div>
+          <div class="action-button">+ ADD</div>
+        </div>
+        <div class="d-flex gap-2 flex-column dish">
+          <div class="title">Cheesy Chicken (18$)</div>
+          <div>
+            <img
+              class="picture-dish"
+              src="https://assets.afcdn.com/recipe/20200219/107901_w1024h1024c1cx4330cy2886.jpg"
+            />
+          </div>
+          <div class="action-button">+ ADD</div>
+        </div>
+        <div class="d-flex gap-2 flex-column dish">
+          <div class="title">Cheesy Chicken (18$)</div>
+          <div>
+            <img
+              class="picture-dish"
+              src="https://assets.afcdn.com/recipe/20200219/107901_w1024h1024c1cx4330cy2886.jpg"
+            />
+          </div>
+          <div class="action-button">+ ADD</div>
+        </div>
+        <div class="d-flex gap-2 flex-column dish">
+          <div class="title">Cheesy Chicken (18$)</div>
+          <div>
+            <img
+              class="picture-dish"
+              src="https://assets.afcdn.com/recipe/20200219/107901_w1024h1024c1cx4330cy2886.jpg"
+            />
+          </div>
+          <div class="action-button">+ ADD</div>
+        </div>
+        <div class="d-flex gap-2 flex-column dish">
+          <div class="title">Cheesy Chicken (18$)</div>
+          <div>
+            <img
+              class="picture-dish"
+              src="https://assets.afcdn.com/recipe/20200219/107901_w1024h1024c1cx4330cy2886.jpg"
+            />
+          </div>
+          <div class="action-button">+ ADD</div>
+        </div>
+        <div class="d-flex gap-2 flex-column dish">
+          <div class="title">Cheesy Chicken (18$)</div>
+          <div>
+            <img
+              class="picture-dish"
+              src="https://assets.afcdn.com/recipe/20200219/107901_w1024h1024c1cx4330cy2886.jpg"
+            />
+          </div>
+          <div class="action-button">+ ADD</div>
+        </div>
+        <div class="d-flex gap-2 flex-column dish">
+          <div class="title">Cheesy Chicken (18$)</div>
+          <div>
+            <img
+              class="picture-dish"
+              src="https://assets.afcdn.com/recipe/20200219/107901_w1024h1024c1cx4330cy2886.jpg"
+            />
+          </div>
+          <div class="action-button">+ ADD</div>
+        </div>
+        <div class="d-flex gap-2 flex-column dish">
+          <div class="title">Cheesy Chicken (18$)</div>
+          <div>
+            <img
+              class="picture-dish"
+              src="https://assets.afcdn.com/recipe/20200219/107901_w1024h1024c1cx4330cy2886.jpg"
+            />
+          </div>
+          <div class="action-button">+ ADD</div>
+        </div>
+        <div class="d-flex gap-2 flex-column dish">
+          <div class="title">Cheesy Chicken (18$)</div>
+          <div>
+            <img
+              class="picture-dish"
+              src="https://assets.afcdn.com/recipe/20200219/107901_w1024h1024c1cx4330cy2886.jpg"
+            />
+          </div>
+          <div class="action-button">+ ADD</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

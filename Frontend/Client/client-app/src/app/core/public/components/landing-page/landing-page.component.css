@@ -1,0 +1,57 @@
+.body-page {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.content-page-mobile {
+  text-align: center;
+  margin: 0px;
+  padding: 10px;
+  width: 600px;
+}
+
+.content-page-mobile {
+  text-align: center;
+  margin: 0px;
+  padding: 10px;
+  width: 400px;
+}
+
+.content-page-web {
+  text-align: center;
+  margin: 0px;
+  padding: 10px;
+  width: 1100px;
+}
+
+.banner-picture-web {
+  height: 200px;
+}
+
+.banner-picture-mobile {
+  width: 380px;
+}
+
+.title-element {
+  display: flex;
+  gap: 5px;
+}
+
+.orange-element {
+  color: var(--orange-color);
+}
+
+.title-primary {
+  font-weight: 700;
+}
+
+.title-secondary {
+  color: grey;
+}
+
+.slider-container {
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+<drag-scroll
+  [class]="(isLargeScreen$ | async) ? 'drag-scroll-web' : 'drag-scroll-mobile'"
+>
+  <div
+    (click)="onSelect(type.key)"
+    drag-scroll-item
+    [class]="selectedKey == type.key ? 'type-element-selected' : 'type-element'"
+    *ngFor="let type of foodTypes"
+  >
+    <div
+      [class]="selectedKey == type.key ? 'color-text-selected' : 'color-text'"
+    >
+      <mat-icon style="margin-top: 3px"> settings</mat-icon>
+      <div class="type-content">{{ type.title }}</div>
+    </div>
+  </div>
+</drag-scroll>

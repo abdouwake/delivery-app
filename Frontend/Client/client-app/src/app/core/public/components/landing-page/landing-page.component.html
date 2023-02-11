@@ -1,0 +1,55 @@
+<div
+  [class]="
+    (isLargeScreen$ | async) ? 'page-container-web' : 'page-container-mobile'
+  "
+>
+  <app-header [selectedItem]="0"></app-header>
+  <div class="body-page">
+    <div
+      [class]="
+        (isLargeScreen$ | async) ? 'content-page-web' : 'content-page-mobile'
+      "
+    >
+      <ng-container *ngIf="isLargeScreen$ | async">
+        <img
+          class="banner-picture-web"
+          src="assets/RestaurantView/bannerWeb.png"
+        />
+      </ng-container>
+      <ng-container *ngIf="!(isLargeScreen$ | async)">
+        <img
+          class="banner-picture-mobile"
+          src="assets/RestaurantView/bannerMobile.png"
+        />
+      </ng-container>
+
+      <br />
+      <br />
+      <div class="title-element">
+        <mat-icon class="orange-element">book</mat-icon>
+        <div class="title-primary">Menu</div>
+        <div class="title-secondary">Category</div>
+      </div>
+
+      <br />
+      <div class="slider-container">
+        <div class="restaurant-list"></div>
+      </div>
+      <app-slider></app-slider>
+
+      <br />
+      <div class="title-element">
+        <mat-icon class="orange-element">assignment</mat-icon>
+        <div class="title-primary">Restaurant</div>
+        <div class="title-secondary">List</div>
+      </div>
+
+      <br />
+      <div class="filters">
+        <app-filters></app-filters>
+        <br />
+        <app-restaurant-card></app-restaurant-card>
+      </div>
+    </div>
+  </div>
+</div>
